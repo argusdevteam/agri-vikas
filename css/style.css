@@ -6,45 +6,14 @@ a, a:focus, a:hover, a:active {
    float: left;
    width: 100%;
    padding: 15px 0px 0px 0px;
-   background-color: rgb(52, 130, 18);
+   background: linear-gradient(to bottom, #7e6a5a, #604c3b);
    }
    img.event-main-logo {
-   height: 80px;
+   height: 40px;
    margin-top: 0px;
    }
-   .live-update-slide {
-   position: relative;
-   border: 1px solid #D4D4D4;
-   border-radius: 4px;
-   height: 44px;
-   padding: 5px 5px 5px 110px;
-   }
-   .live-update-slide h2 {
-   margin: 0px;
-   padding: 0px;
-   background-color: #851719;
-   color: #fff;
-   line-height: 44px;
-   position: absolute;
-   left: 0;
-   top: 0;
-   font-size: 15px;
-   text-transform: capitalize;
-   width: 100px;
-   text-align: center;
-   }
-   .live-update-slide h3 {
-   margin: 0;
-   padding: 0;
-   font-size: 15px;
-   line-height: 17px;
-   font-weight: 600;
-   color: #000;
-   display: table-cell;
-   vertical-align: middle;
-   height: 25px;
-   overflow: hidden;
-   }
+
+
    ul.header-rath-part {
    margin: 0px;
    padding: 0px;
@@ -131,7 +100,7 @@ a, a:focus, a:hover, a:active {
    font-weight: 600;
    font-size: 23px;
    text-transform: uppercase;
-   color: #237522
+   color: #604c3b
    }
    h3.rathayatra-heading:after {
    position: absolute;
@@ -139,7 +108,7 @@ a, a:focus, a:hover, a:active {
    left: 0;
    right: 0;
    content: "";
-   background-color: red;
+   background-color: #604c3b;
    width: 40px;
    height: 3px;
    display: block;
@@ -207,7 +176,7 @@ a, a:focus, a:hover, a:active {
    display: none;
    }
    a.view-all-btn {
-   background-color: rgb(35 57 115);
+    background: linear-gradient(to bottom, #7e6a5a, #604c3b);
    width: 120px;
    height: 40px;
    text-align: center;
@@ -823,41 +792,9 @@ a, a:focus, a:hover, a:active {
     height: 72px;
     overflow: hidden;
     }
-    .otv-cat-news-third {
-    position: relative;
-    margin: 10px 0px;
-    padding: 10px 10px;
-    -webkit-box-shadow: 0 0 6px 0 rgb(121 121 121 / 16%);
-    -moz-box-shadow: 0 0 6px 0 rgba(121,121,121,0.16);
-    -o-box-shadow: 0 0 6px 0 rgba(121,121,121,0.16);
-    box-shadow: 0 0 6px 0 rgb(121 121 121 / 16%);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #fff;
-    display: inline-block;
-    }
-    .otv-cat-news-third:hover {
-    webkit-box-shadow: 0 0 6px 3px rgb(121 121 121 / 16%);
-    -moz-box-shadow: 0 0 6px 3px rgba(121,121,121,0.16);
-    -o-box-shadow: 0 0 6px 3px rgba(121,121,121,0.16);
-    box-shadow: 0 0 6px 3px rgb(121 121 121 / 16%);
-    }
-    h2.otv-heading-third {
-    margin: 0;
-    padding: 0;
-    color: #000;
-    font-size: 18px;
-    margin-bottom: 10px;
-    line-height: 23px;
-    font-weight: 500;
-    }
-    .otv-cat-news-third img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    }
+   
+    
+
     .otv-sidebar-headlines h5 {
     margin: 0;
     padding: 0;
@@ -1082,13 +1019,14 @@ height: 311px;
     padding-right: 80px;
     padding-bottom: 10px;
     padding-top: 10px;
-    background-color: rgb(52, 130, 18);
+    background: linear-gradient(to bottom, #7e6a5a, #604c3b);
     color: #fff;
     font-size: 21px;
     border-radius: 0;
 }
 .btn-know-more:hover{
-    background-color: rgb(52, 130, 18);
+    background: linear-gradient(to bottom, #4e3c2e, #604c3b);
+    color: #fff;
 }
 .footer-photos-gallery img{
     width: 100%;
