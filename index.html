@@ -20,83 +20,311 @@
    <link href="https://argusnews.in/app/static/img/argus_favicon.png" rel="shortcut icon" type="image/png">
    <link rel="stylesheet" href="css/bootstrap-main.css">
    <link rel="stylesheet" href="css/style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
+ <style>
+   /* Header Styling */
+header {
+    background: linear-gradient(to bottom, #7e6a5a, #604c3b);
+    padding: 10px 0;
+}
+
+/* Logo */
+.event-main-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation */
+.header-links {
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.header-links li:last-child {
+    margin-right: 0;
+}
+
+.text-white {
+    color: white !important;
+}
+
+a.text-decoration-none {
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .text-right {
+        text-align: center;
+    }
+
+    .header-links {
+        justify-content: center; /* Center align on mobile */
+    }
+
+    .header-links li {
+        margin-right: 10px; /* Reduce spacing on mobile */
+    }
+
+    .header-links img {
+        vertical-align: middle;
+    }
+}
+
+
+       .timeline {
+    position: relative;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background-color: #026836;
+    margin-left: -1.5px;
+}
+
+.timeline > li {
+    position: relative;
+    margin-bottom: 30px;
+    width: 50%;
+    padding-right: 30px;
+    clear: both;
+}
+
+.timeline > li:nth-child(even) {
+    padding-right: 0;
+    padding-left: 30px;
+    float: right;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline-panel {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-heading {
+    margin-bottom: 15px;
+}
+
+.timeline-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #026836;
+}
+
+.timeline-body p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.timeline > li .timeline-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #026836;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    </style>
+
 <body>
-   <header>
-      <div class="container">
-         <div class="row" style="margin-bottom: 15px;">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-               <a href="https://argusnews.in" target="_blank">
-                  <img src="images/Argus_Logo _White.png" alt=""
-                     title="" class="event-main-logo">
-               </a>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-               <h2
-                  style="font-size: 29px; margin: 8px; padding: 0px; font-weight: 700; text-align: center; color: #fff;">
-                   </h2>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-               <ul class="header-rath-part">
-                  <li class="header-rath-img">
-                  </li>
-                  <li class="hedaer-livetv"><a href="https://argusnews.in/live-tv" target="_blank"><img
-                           src="https://odishatv.in/commondir/images/livetvicon.gif" width="28" height="26" alt=""
-                           title="" style="margin-top: -3px;"> live TV</a></li>
-               </ul>
-            </div>
+   <header class="bg-dark py-3">
+   <div class="container">
+      <div class="row">
+         <!-- Logo Section -->
+         <div class="col-xs-6 col-sm-3">
+            <a href="https://argusnews.in" target="_blank">
+               <img src="images/Argus_Logo _White.png" alt="Argus News" class="event-main-logo img-responsive">
+            </a>
+         </div>
+
+         <!-- Title Section (Hidden on Mobile) -->
+         <div class="col-sm-6 hidden-xs text-center">
+            <h2 class="text-white fw-bold" style="font-size: 24px;"></h2>
+         </div>
+
+         <!-- Navigation Section -->
+         <div class="col-xs-6 col-sm-3 text-right">
+            <ul class="list-inline header-links">
+               <li style="margin-top:3px;">
+                  <a href="about.html" target="_blank" class="text-white text-decoration-none fw-bold" >
+                     About Us
+                  </a>
+               </li>
+               <li style="margin-top:3px;">
+                  <a href="https://argusnews.in/live-tv" target="_blank" class="text-white text-decoration-none fw-bold" >
+                     <img src="https://odishatv.in/commondir/images/livetvicon.gif" width="28" height="26" alt="Live TV">
+                     Live TV
+                  </a>
+               </li>
+            </ul>
          </div>
       </div>
-   </header>
+   </div>
+</header>
+
    <div class="main-banner">
       <a href="https://argusenglish.in/" target="_blank">
          <img src="images/health-connect-banner-02.png" alt="" title="" class="main-bbanner-image">
       </a>
    </div>
-
-   <section>
-      <div class="row">
-         <div class="col-lg-12 text-center">
-            <a href="images/agri-vikas-season-4-brochure.pdf" class="btn btn-know-more" target="_blank">Click Here To Know More</a>
-         </div>
-      </div>
-   </section>
-
    <section class="about-sec">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2">
-               <div class="about-first-sec">
-                  <iframe width="100%" height="500" src="https://www.youtube.com/embed/tCPksWqoJ4A?si=WuYqwv1yngVQGjDF"
-                     title="YouTube video player" frameborder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                     allowfullscreen></iframe>
-               </div>
-               <div class="about-second-sec">
-                  <h1 style="color: #604c3b;">INDIAN AGRICULTURE - THE ROAD AHEAD</h1>
-                  <p style="margin-top: 20px;">The Indian Agriculture sector is all set to unveil a better tomorrow
-                     with the Government striving to boost agricultural production,
-                     enhance productivity, and improve farmers' livelihoods by
-                     addressing critical challenges and fostering sustainable
-                     development through innovative practices and supportive
-                     measures. The thrust is to move from conventional methods to
-                     modern technology
-                     Despite the decline of the share of agriculture in India's GDP to 15
-                     per cent last fiscal year from 35 per cent in 1990-91 it remains the
-                     leader in employment. Its share in employment was 44.1 per cent
-                     in 2017-18, which has increased to 46.1 per cent in 2023-24.</p>
-               </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="about-second-sec">
+               <h1 class="text-center" style="
+                  color: #026836; 
+                  font-weight: bold; 
+                  font-size: 32px; 
+                  padding: 10px 20px; 
+                  border-bottom: 3px solid #026836; 
+                  border-radius: 10px; 
+                  width: fit-content;
+                  margin: 0 auto 30px;
+                  ">
+                  Seeds of Change in Odisha
+               </h1>
+               <h2 class="text-center font-weight-bold">Agri Vikas 2025</h2>
+               <p class="mt-3">
+                  After three consecutive successful Conclaves on Agriculture, Argus News is hosting the next edition in May 2025.
+                  The Conclave is a dynamic platform that brings together policymakers, industry leaders, scientists, agripreneurs, and farmers to discuss the evolving landscape of agriculture. With a focus on sustainability, innovation, and policy reforms, the Conclave aims to address key challenges, foster collaboration and knowledge exchange, driving actionable solutions for a more productive, sustainable, and resilient agricultural sector. Whether exploring cutting-edge technologies, policy interventions, or emerging agribusiness trends, Agri Vikas 2025 serves as a catalyst for shaping the future of farming and agribusiness.
+               </p>
+            </div>
+         </div>
+         <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="about-first-sec">
+               <iframe width="100%" height="500" src="https://www.youtube.com/embed/tCPksWqoJ4A?si=WuYqwv1yngVQGjDF"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
             </div>
          </div>
       </div>
-   </section>
-   <section class="shorts">
+   </div>
+   <div class="container">
+      <div class="col-lg-12 text-center mb-3">
+         <a href="images/agri-vikas-season-4-brochure.pdf" class="btn btn-know-more text-white" style="font-size: 20px;" target="_blank">Click Here To Know More</a>
+      </div>
+   </div>
+
+   <div class="container">
+      <h2 class="text-center mt-5 mb-4" style="
+                  color: #026836; 
+                  font-weight: bold; 
+                  font-size: 32px; 
+                  padding: 10px 20px; 
+                  border-bottom: 3px solid #026836; 
+                  border-radius: 10px; 
+                  width: fit-content;
+                  margin: 0 auto 30px;
+                  ">Conclave Sessions</h2>
+      <ul class="timeline">
+         <li>
+            <div class="timeline-badge primary"><i class="glyphicon glyphicon-time"></i></div>
+            <div class="timeline-panel">
+               <div class="timeline-heading">
+                  <h3 class="timeline-title">Session 01</h3>
+               </div>
+               <div class="timeline-body">
+                  <p>◆ Crop Diversification: Pulses, Oilseeds, Medicinal & Aromatic Plants, Horticulture (Fruits, Vegetables, Flowers, etc.)</p>
+                  <p>◆ Role of technology in empowering small & marginal farmers</p>
+               </div>
+            </div>
+         </li>
+         <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="glyphicon glyphicon-leaf"></i></div>
+            <div class="timeline-panel">
+               <div class="timeline-heading">
+                  <h3 class="timeline-title">Session 02</h3>
+               </div>
+               <div class="timeline-body">
+                  <p>◆ Sustainable Farming – the future of chemical-free agriculture</p>
+                  <p>◆ Startups – Agri Entrepreneurship and Rural Economy</p>
+               </div>
+            </div>
+         </li>
+         <li>
+            <div class="timeline-badge warning"><i class="glyphicon glyphicon-stats"></i></div>
+            <div class="timeline-panel">
+               <div class="timeline-heading">
+                  <h3 class="timeline-title">Session 03</h3>
+               </div>
+               <div class="timeline-body">
+                  <p>◆ Doubling Farmers’ Income: Strategies and Challenges</p>
+                  <p>◆ Climate Change and Risk Mitigation - Public Private Partnership in Crop Insurance</p>
+                  <p>◆ FPO - The concept, implementation, and the status</p>
+                  <p>◆ Infrastructure Development (Irrigation, Cold Storage, Mandi)</p>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
+</section>
+
+   <!-- <section class="timeline">
+      <div class="container">
+          <div >
+        <div class="session">
+            <h3>Session 01</h3>
+            <p>&#x25C6; Crop Diversification: Pulses, Oilseeds, Medicinal & Aromatic Plants, Horticulture (Fruits, Vegetables, Flowers etc.)</p>
+            <p>&#x25C6; Role of technology in empowering small & marginal farmers</p>
+        </div>
+        <div class="session">
+            <h3>Session 02</h3>
+            <p>&#x25C6; Sustainable Farming – the future of chemical-free agriculture</p>
+            <p>&#x25C6; Startups – Agri Entrepreneurship and Rural Economy</p>
+        </div>
+        <div class="session">
+            <h3>Session 03</h3>
+            <p>&#x25C6; Doubling Farmers’ Income: Strategies and Challenges</p>
+            <p>&#x25C6; Climate Change and Risk Mitigation - Public Private Partnership in Crop Insurance</p>
+            <p>&#x25C6; FPO - The concept, implementation and the status</p>
+            <p>&#x25C6; Infrastructure Development (Irrigation, Cold Storage, Mandi)</p>
+        </div>
+    </div>
+      </div>
+   </section> -->
+<section class="shorts">
       <div class="container">
          <h3 class="rathayatra-heading">Argus Agrivikas - 2025 Shorts</h3>
-         <div class="row">
-
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/cmEa3pPoMv8?si=HLTn88S4ykbRv7zu"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -105,7 +333,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/PT_XQUFDHZo?si=9HgnnZQaYCS6g3EH"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -114,7 +342,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/Sz4bnQwLdYc?si=-01V3r_V49SkR-zX"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -123,7 +351,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/GAcYUcYaJ5c?si=7v6v06h5WMXFAAXA"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -132,7 +360,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/WaCsMMDhq7I?si=Si4BgT6xzxSUUCLJ"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -141,7 +369,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/4wRQHa4aI2I?si=wfxeQwMpZdoHc3Cq"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -150,7 +378,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/AAsQpGLpfCw?si=MX-RO3FeicXMRMd8"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -159,7 +387,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-2 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/AkbfDmprjlI?si=UbZrexP5dLIehAX6"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -168,7 +396,7 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-3 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/FP5jhW9W7f8?si=7FMCbpmiBsPshxMP"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -177,19 +405,19 @@
                </div>
             </div>
 
-            <div class="col-lg-15 col-sm-6 col-xs-6">
+            <div class="col-lg-2 col-sm-6 col-xs-6">
                <div class="shorts-5">
                   <iframe width="315" height="560" src="https://www.youtube.com/embed/IoPQM0aq17Q?si=GZOagMD0ZmD5d4Dv"
                      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
                                     gyroscope; picture-in-picture;
                                     web-share" allowfullscreen></iframe>
                </div>
-            </div>
          </div>
       </div><a href="https://www.youtube.com/playlist?list=PL1yg0w31ITMx9qrgUTI0jrvTOEfnIkTd-"
          target="_blank" class="view-all-btn">view all</a>
       </div>
    </section>
+
    <section class="healthconnect-video-news">
       <div class="container">
          <h3 class="rathayatra-heading">Argus Agrivikas - 2025 Videos</h3>
